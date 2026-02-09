@@ -3,12 +3,12 @@ import {
   Phone,
   MessageCircle,
   Globe,
-  UtensilsCrossed,
   Calendar,
   Instagram,
   Facebook,
   Youtube,
 } from 'lucide-react'
+import Image from 'next/image'
 
 export default function RestaurantLinks() {
 
@@ -19,10 +19,11 @@ export default function RestaurantLinks() {
         {
           icon: Globe,
           label: 'Visit Our Website',
-          href: 'https://www.bellatavola.com',
+          href: 'https://house6experience.com/',
         },
         {
-          icon: UtensilsCrossed,
+          imageSrc: '/Chevan-removebg.png',
+          imageAlt: 'Chevan logo',
           label: 'View Our Menu',
           href: 'https://www.bellatavola.com/menu',
         },
@@ -80,16 +81,24 @@ export default function RestaurantLinks() {
       {/* Header */}
       <header className="border-b border-border bg-white">
         <div className="max-w-2xl mx-auto px-4 py-12 sm:py-16">
-          <div className="flex flex-col items-center text-center gap-4">
-            <div className="w-24 h-24 rounded-full bg-gradient-to-br from-accent to-accent/80 flex items-center justify-center">
-              <UtensilsCrossed className="w-12 h-12 text-accent-foreground" />
+          <div className="flex flex-col items-center text-center gap-2">
+            <div className="w-24 h-24 rounded-full flex items-center justify-center overflow-hidden border">
+              <Image
+                src="/Chevan-removebg.png"
+                alt="Chevan logo"
+                width={96}
+                height={96}
+                className="object-contain"
+                priority
+              />
             </div>
             <div>
               <h1 className="text-4xl sm:text-5xl font-light tracking-tight text-primary mb-2">
-                Bella Tavola
+                Chevan
               </h1>
               <p className="text-lg text-muted-foreground font-light">
-                Authentic Italian Dining Experience
+                Your premium destination for unforgettable food and drink experiences in Lagos.
+                Whether you’re looking for a laid-back hangout or a lively night out, Chevan Hospitality (Bar & Restaurant) delivers the perfect blend of ambiance, flavor, and fun.
               </p>
             </div>
           </div>
@@ -112,7 +121,19 @@ export default function RestaurantLinks() {
                     <a key={idx} href={item.href} target="_blank" rel="noopener noreferrer">
                       <button className="w-full flex items-center justify-between px-5 py-4 bg-white border border-border rounded-lg hover:border-accent hover:shadow-md transition-all duration-200 group">
                         <div className="flex items-center gap-4">
-                          <IconComponent className="w-5 h-5 text-primary group-hover:text-accent transition-colors" />
+                          {item.imageSrc ? (
+                            <Image
+                              src={item.imageSrc}
+                              alt={item.imageAlt}
+                              width={20}
+                              height={20}
+                              className="object-contain"
+                            />
+                          ) : (
+                            IconComponent && (
+                              <IconComponent className="w-5 h-5 text-primary group-hover:text-accent transition-colors" />
+                            )
+                          )}
                           <span className="text-primary font-medium">{item.label}</span>
                         </div>
                         <svg

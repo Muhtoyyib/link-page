@@ -7,8 +7,13 @@ import './globals.css'
 const manrope = Manrope({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Bella Tavola - Authentic Italian Dining',
-  description: 'Welcome to Bella Tavola. Explore our menu, make reservations, and connect with us on social media.',
+  title: 'Chevan',
+  description:
+    'Chevan Hospitality (Bar & Restaurant) delivers unforgettable food and drink experiences in Lagos.',
+  icons: {
+    icon: '/Chevan-removebg.png',
+    apple: '/Chevan-removebg.png',
+  },
   generator: 'v0.app',
 }
 
