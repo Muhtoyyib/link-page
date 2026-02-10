@@ -25,7 +25,7 @@ export default function RestaurantLinks() {
           imageSrc: '/Chevan-removebg.png',
           imageAlt: 'Chevan logo',
           label: 'View Our Menu',
-          href: 'https://www.bellatavola.com/menu',
+          href: '/menu',
         },
         {
           icon: Calendar,
@@ -40,18 +40,18 @@ export default function RestaurantLinks() {
         {
           icon: Instagram,
           label: 'Follow on Instagram',
-          href: 'https://instagram.com/bellatavola',
+          href: 'https://www.instagram.com/foodbychevan?',
         },
-        {
-          icon: Facebook,
-          label: 'Like on Facebook',
-          href: 'https://facebook.com/bellatavola',
-        },
-        {
-          icon: Youtube,
-          label: 'Subscribe on YouTube',
-          href: 'https://youtube.com/@bellatavola',
-        },
+        // {
+        //   icon: Facebook,
+        //   label: 'Like on Facebook',
+        //   href: 'https://facebook.com/bellatavola',
+        // },
+        // {
+        //   icon: Youtube,
+        //   label: 'Subscribe on YouTube',
+        //   href: 'https://youtube.com/@bellatavola',
+        // },
       ],
     },
     {
@@ -59,18 +59,18 @@ export default function RestaurantLinks() {
       items: [
         {
           icon: Phone,
-          label: '+1 (555) 123-4567',
-          href: 'tel:+15551234567',
+          label: '+234 803 306 4073',
+          href: 'tel:+2348033064073',
         },
         {
           icon: MessageCircle,
           label: 'WhatsApp Us',
-          href: 'https://wa.me/15551234567',
+          href: 'https://wa.me/2348033064073',
         },
         {
           icon: MapPin,
-          label: 'Find Us on Google Maps',
-          href: 'https://maps.google.com/maps/place/Bella+Tavola',
+          label: '6aa Cario Street, Biltmore Estate, Abuja',
+          href: 'https://www.google.com/maps/place/Biltmore+Homes+Estate/@8.9833081,7.4141041,15z/data=!4m10!1m2!2m1!1s+6A+Cairo+Street,+Biltmore+Homes+Estate+Galadimawa+Abuja!3m6!1s0x104e737b52e7698b:0x811240e0cd488142!8m2!3d8.979293!4d7.430979!15sCjc2QSBDYWlybyBTdHJlZXQsIEJpbHRtb3JlIEhvbWVzIEVzdGF0ZSBHYWxhZGltYXdhIEFidWphWjgiNjZhIGNhaXJvIHN0cmVldCBiaWx0bW9yZSBob21lcyBlc3RhdGUgZ2FsYWRpbWF3YSBhYnVqYZIBD2hvdXNpbmdfc29jaWV0eZoBJENoZERTVWhOTUc5blMwVkpRMEZuVFVSQk5HUmlXalZCUlJBQuABAPoBBAgAEEs!16s%2Fg%2F11f61f2n5g?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D',
         },
       ],
     },
@@ -117,8 +117,14 @@ export default function RestaurantLinks() {
               <div className="space-y-3">
                 {section.items.map((item, idx) => {
                   const IconComponent = item.icon
+                  const isExternal = !item.href.startsWith('/')
                   return (
-                    <a key={idx} href={item.href} target="_blank" rel="noopener noreferrer">
+                    <a
+                      key={idx}
+                      href={item.href}
+                      target={isExternal ? '_blank' : undefined}
+                      rel={isExternal ? 'noopener noreferrer' : undefined}
+                    >
                       <button className="w-full flex items-center justify-between px-5 py-4 bg-white border border-border rounded-lg hover:border-accent hover:shadow-md transition-all duration-200 group">
                         <div className="flex items-center gap-4">
                           {item.imageSrc ? (
@@ -162,7 +168,7 @@ export default function RestaurantLinks() {
         <div className="mt-12 pt-8 border-t border-border text-center">
           <p className="text-sm text-muted-foreground mb-2">Bella Tavola Restaurant</p>
           <p className="text-xs text-muted-foreground">
-            123 Italian Street, Culinary City, CC 12345
+            6aa Cario Street, Biltmore Estate
           </p>
         </div>
       </main>
