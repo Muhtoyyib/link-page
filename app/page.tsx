@@ -27,11 +27,11 @@ export default function RestaurantLinks() {
           label: 'View Our Menu',
           href: '/menu',
         },
-        {
-          icon: Calendar,
-          label: 'Make a Reservation',
-          href: 'https://www.bellatavola.com/reservations',
-        },
+        // {
+        //   icon: Calendar,
+        //   label: 'Make a Reservation',
+        //   href: 'https://www.bellatavola.com/reservations',
+        // },
       ],
     },
     {
