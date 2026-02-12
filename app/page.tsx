@@ -69,7 +69,7 @@ export default function RestaurantLinks() {
         },
         {
           icon: MapPin,
-          label: '6aa Cario Street, Biltmore Estate, Abuja',
+          label: '6A Cario Street, Biltmore Estate, Abuja',
           href: 'https://www.google.com/maps/place/Biltmore+Homes+Estate/@8.9833081,7.4141041,15z/data=!4m10!1m2!2m1!1s+6A+Cairo+Street,+Biltmore+Homes+Estate+Galadimawa+Abuja!3m6!1s0x104e737b52e7698b:0x811240e0cd488142!8m2!3d8.979293!4d7.430979!15sCjc2QSBDYWlybyBTdHJlZXQsIEJpbHRtb3JlIEhvbWVzIEVzdGF0ZSBHYWxhZGltYXdhIEFidWphWjgiNjZhIGNhaXJvIHN0cmVldCBiaWx0bW9yZSBob21lcyBlc3RhdGUgZ2FsYWRpbWF3YSBhYnVqYZIBD2hvdXNpbmdfc29jaWV0eZoBJENoZERTVWhOTUc5blMwVkpRMEZuVFVSQk5HUmlXalZCUlJBQuABAPoBBAgAEEs!16s%2Fg%2F11f61f2n5g?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D',
         },
       ],
